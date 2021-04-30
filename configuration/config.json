@@ -3,8 +3,10 @@
         "appName": "node_3x_api",
         "port": "3000",
         "database": {
-            "host": "devday-il-0000.se-couchbasedemos.com",
-            "secure": true,
+            "host": "host.docker.internal",
+            "secure": false,
+            "host_EXTERNAL": "devday-yk-0512.se-couchbasedemos.com",
+            "secure_EXTERNAL": true,
             "bucket": "retailsample",
             "username": "svc-devdays",
             "password": "password"
