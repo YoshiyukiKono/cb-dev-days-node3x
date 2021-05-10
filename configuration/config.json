@@ -5,8 +5,7 @@
         "database": {
             "host": "host.docker.internal",
             "secure": false,
-            "host_EXTERNAL": "devday-yk-0512.se-couchbasedemos.com",
-            "secure_EXTERNAL": true,
+            "host_EXTERNAL": "3.143.24.107",
             "bucket": "retailsample",
             "username": "svc-devdays",
             "password": "password"
