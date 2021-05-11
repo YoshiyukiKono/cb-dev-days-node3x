@@ -60,6 +60,17 @@ class Repository {
         "repository.js:connect() - error connecting to bucket."
       );
     }
+    let services = [couchbase.ServiceType.KeyValue, couchbase.ServiceType.Query];
+    this.bucket.ping(services, (err, res) => {
+      if (err) {
+        outputMessage(
+          err,
+          "repository.js:connect() - error pinging to bucket."
+        );
+      } else {
+        outputMessage(res, "repository.js:connect() - ping response");
+      }
+    })
   }
 
   async ping() {
