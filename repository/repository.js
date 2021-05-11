@@ -151,6 +151,8 @@ class Repository {
       //TODO:  prepared queries
       // if (adhoc) {
       //   options.adhoc = true;
+      // } else {
+      //   options.adhoc = false;
       // }
 
       let qResult = await this.cluster.query(n1qlQuery, options);
