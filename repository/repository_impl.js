@@ -151,9 +151,11 @@ class Repository {
       };
 
       //TODO:  prepared queries
-      // if (adhoc) {
-      //   options.adhoc = true;
-      // }
+      if (adhoc) {
+        options.adhoc = true;
+      } else {
+        options.adhoc = false;
+      }
 
       let qResult = await this.cluster.query(n1qlQuery, options);
       if (!qResult.rows || qResult.rows.length == 0) {
@@ -395,9 +397,7 @@ class Repository {
       };
 
       //TODO:  prepared queries
-      // if (adhoc) {
-      //   options.adhoc = true;
-      // }
+      options.adhoc = false;
 
       let qResult = await this.cluster.query(n1qlQuery, options);
       if (!qResult.rows || qResult.rows.length == 0) {
@@ -441,9 +441,7 @@ class Repository {
       };
 
       //TODO:  prepared queries
-      // if (adhoc) {
-      //   options.adhoc = true;
-      // }
+      options.adhoc = false;
 
       let qResult = await this.cluster.query(n1qlQuery, options);
       if (!qResult.rows || qResult.rows.length == 0) {
